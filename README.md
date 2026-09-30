@@ -92,18 +92,3 @@ npm run build
 - Notification panel with mark-read and mark-all-read
 - OAuth2 and role-based route/API protection
 
-## Submission Notes
-- Do not include generated artifacts in submission package:
-	- `backend/target`
-	- `frontend/dist`
-	- `frontend/node_modules`
-	- runtime upload dumps
-- Ensure `docs/contribution-matrix.md` and report match actual implementation and commit history.
-
-## Team Clone Troubleshooting (OAuth/Login)
-- If Google login says `invalid_client`, verify backend `.env` has real `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`.
-- Ensure `MONGODB_URI` includes a database path, e.g. `/smartcampusdb`.
-- Keep frontend running on `http://localhost:5173` (Vite is configured with strict port).
-- In Google Cloud OAuth client settings, authorized redirect URI must include:
-	- `http://localhost:8080/login/oauth2/code/google`
-- If using a different frontend URL, update `FRONTEND_URL` in backend `.env` accordingly.
